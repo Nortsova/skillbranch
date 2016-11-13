@@ -1,0 +1,1 @@
+{"version":3,"file":null,"sources":["../src/index.js"],"sourcesContent":["function hello(name) {\n  console.log(`Hello ${name}`); // eslint-disable-line\n}\nhello('JS World');\n"],"names":["hello","name","log"],"mappings":";;AAAA,SAASA,KAAT,CAAeC,IAAf,EAAqB;UACXC,GAAR,YAAqBD,IAArB,EADmB;;AAGrBD,MAAM,UAAN"}
