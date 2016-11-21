@@ -30,26 +30,7 @@ async function getPC(pcUrl) {
 const pcUrl =
   'https://gist.githubusercontent.com/isuvorov/ce6b8d87983611482aac89f6d7bc0037/raw/pc.json';
 
-//
-//
-// app.use('/task3a', async (req, res, next) => {
-//        let result = await getPC(pcUrl);
-//        const path = req.path.match(/[^\/]+/g);
-//        if(path !== null) {
-//
-//          switch (path.length) {
-//            case (1):result = result[path[0]];break;
-//            case (2):result = result[path[0]][path[1]];break;
-//
-//            default: result = result;break;
-//
-//          }
-//       console.log(path);
-//        }
-//
-//          return res.json(result);
-//
-// });
+
 
 app.use('/task3A', async (req, res, next) => {
 
@@ -83,6 +64,9 @@ app.use('/task3A', async (req, res, next) => {
        res.json(result) :
        res.sendStatus(404);
 });
+
+
+app.get('/task2d', function);
 
 app.listen(3000, () => {
   console.log('Your app listening on port 3000!');
