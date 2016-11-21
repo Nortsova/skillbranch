@@ -72,8 +72,8 @@ app.use('/task3A', async (req, res, next) => {
      } else {
         switch (path.length) {
           case (1):  (result.hasOwnProperty(path[0])) ? result = result[path[0]] : result = "";break;
-          case (2): (result.hasOwnProperty(path[0])) ? result = result[path[0]][path[1]]: result="";break;
-          case (3):result = result[path[0]][path[1]][path[2]];break;
+          case (2): (result.hasOwnProperty(path[0]) && path[1] !== 'length') ? result = result[path[0]][path[1]]: result="";break;
+          case (3): (path[2] !== 'length') ? result = result[path[0]][path[1]][path[2]] : result="";break;
           default: result = result;break;
         }
       }
@@ -86,6 +86,4 @@ app.use('/task3A', async (req, res, next) => {
 
 app.listen(3000, () => {
   console.log('Your app listening on port 3000!');
-
-
 });
